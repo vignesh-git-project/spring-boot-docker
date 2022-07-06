@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: aws
+pool: default
 steps:
 - task: Maven@3
   inputs:
