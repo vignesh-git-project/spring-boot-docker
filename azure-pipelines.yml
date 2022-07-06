@@ -14,3 +14,8 @@ steps:
     mavenOptions: '-Xmx3072m'
     jdkArchitectureOption: 'x64'
     goals: 'package'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
